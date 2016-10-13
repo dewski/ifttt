@@ -30,16 +30,10 @@ func Deliver(action string, values Values) error {
 		return err
 	}
 
+	fmt.Println(string(body))
+
 	buffer := bytes.NewBuffer(body)
-	req, err := http.NewRequest("POST", url, buffer)
-	if err != nil {
-		return err
-	}
-
-	req.Header.Set("Content-Type", "application/json")
-
-	client := &http.Client{}
-	_, err = client.Do(req)
+	_, err = http.Post(url, "application/json", buffer)
 	if err != nil {
 		return err
 	}
