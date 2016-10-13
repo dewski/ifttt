@@ -9,9 +9,9 @@ import (
 )
 
 type Values struct {
-	Value1 string `json:"value1"`
-	Value2 string `json:"value2"`
-	Value3 string `json:"value2"`
+	Value1 interface{} `json:"value1"`
+	Value2 interface{} `json:"value2"`
+	Value3 interface{} `json:"value3"`
 }
 
 var (
