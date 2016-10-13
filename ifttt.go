@@ -30,8 +30,6 @@ func Deliver(action string, values Values) error {
 		return err
 	}
 
-	fmt.Println(string(body))
-
 	buffer := bytes.NewBuffer(body)
 	_, err = http.Post(url, "application/json", buffer)
 	if err != nil {
