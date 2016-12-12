@@ -1,5 +1,7 @@
 # ifttt
 
+ [![](https://godoc.org/github.com/dewski/ifttt?status.svg)](http://godoc.org/github.com/dewski/ifttt)
+
 ```go
 package main
 
